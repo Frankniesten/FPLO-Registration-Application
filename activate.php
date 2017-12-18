@@ -1,7 +1,5 @@
 <?php
 	
-	//TO DO: Alleen nog de twee mysq's oppoetsen.
-		
 	include 'header.php'; 
 ?>
 
@@ -28,9 +26,8 @@ if ($result) {
         //Handle Form input:
         $form_data=$_POST;
         unset($form_data['register']);
-        
-        
-        
+
+               
         //Generate dummy PassWD for SURFconext users or use passWD from form fields:
         if ($result[0]['surfconext'] == TRUE) {
 	        $password = hash('md5',random_bytes (20));
@@ -48,10 +45,9 @@ if ($result) {
 	        "firstName" => $result[0]['firstName'],
 			"lastName" => $result[0]['lastName'],
 			"email" => $result[0]['email'],
+			"role" => $form_data['Rol'],
 			"password" => $passwordReady
-        );
-        
-        
+        );   
 
 		//Remove Token(s) & Set Activation to TRUE in Database:
         $content = array(
@@ -63,7 +59,13 @@ if ($result) {
 	    
 	    $sql = "UPDATE register SET token = :token, activate = :activate WHERE email=:email";
         pdo_insert ($sql, $content);
-	    
+ 
+	      
+	    //###CALL NODE RED API###
+	    	    
+	    //Send user data to NodeRed:
+	    $nodered_response = nodered_api ('/person','POST', $account);
+	    	    
 	    //Show succes message:
 	    include 'ui/activate_succes.php';
  	}
@@ -93,6 +95,29 @@ if ($result) {
 		
 	?>
 	<br>
+	<ul class="list-group">
+		<li class="list-group-item list-group-item-dark"><h5>Selecteer rol</h5></li>
+		<li class="list-group-item">
+	
+			
+			
+			<div class="form-group col-sm-6">
+				<div class="form-check">
+					  <label class="form-check-label">
+					    <input class="form-check-input" type="radio" name="Rol" id="Rol" value="teacher" >
+					    Docent is mijn rol binnen de leeromgeving.
+					  </label>
+					</div>
+					<div class="form-check">
+					  <label class="form-check-label">
+					    <input class="form-check-input" type="radio" name="Rol" id="Rol" value="student" checked>
+					    Student	is mijn rol binnen de leeromgeving.				  </label>
+					</div>
+				<div class="help-block with-errors text-muted"></div>
+			</div>
+		</li>
+	</ul>
+	<br>
 	
 	<ul class="list-group">
 		<li class="list-group-item list-group-item-dark"><h5 >Stel Wachtwoord in</h5></li>
@@ -120,6 +145,7 @@ if ($result) {
 		
 		<?php
 		}
+		
 		
 		else {
 			
