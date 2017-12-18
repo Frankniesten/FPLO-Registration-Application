@@ -1,8 +1,19 @@
-<?php include 'header.php';
+<?php 
+	include 'header.php';
 	
-	// SimpleSaml PHP installeren.
-	// IDP implementeren.
-	// Attributen gebruiken om forumlier in te vullen en dan submit.
+	//Include simplesaml auth:
+	require_once(getConfig($config, 'simplesamlphp_path'));
+	
+	
+	$as = new \SimpleSAML\Auth\Simple(getConfig($config, 'simplesamlphp_idp'));
+	$as->requireAuth();
+	
+	$attributes = $as->getAttributes();
+	
+	
+	//Dit kan nog weg
+	print_r($attributes);
+	
 	
 	
 ?>
