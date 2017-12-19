@@ -33,7 +33,7 @@ if ($result) {
 	        $password = hash('md5',random_bytes (20));
         }
         else {
-	    	$password = $form_data['password'];
+	    	$password = hash('md5', $form_data['password']);
         }
         
         //Hash password for EDUtrac:
