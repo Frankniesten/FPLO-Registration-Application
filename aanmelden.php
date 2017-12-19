@@ -5,7 +5,7 @@
 	require_once(getConfig($config, 'simplesamlphp_path'));
 	
 	
-	$as = new \SimpleSAML\Auth\Simple(getConfig($config, 'simplesamlphp_idp'));
+	$as = new SimpleSAML_Auth_Simple(getConfig($config, 'simplesamlphp_idp'));
 	$as->requireAuth();
 	
 	$attributes = $as->getAttributes();
