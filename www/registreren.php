@@ -1,6 +1,6 @@
 <?php 
 
-include 'header.php'; 
+include $_SERVER['DOCUMENT_ROOT'].'/../data/'.'header.php'; 
 
 ?>
 
@@ -12,8 +12,11 @@ include 'header.php';
         
         $form_data=$_POST;
         unset($form_data['register']);
+      
+        //Secure input.
+        $form_data = secure_input_array ($form_data);
         
-        //Check if user already exists:
+        //Check if user already exists:        
         $sql = "SELECT * FROM register WHERE email = '".$form_data['email']."' AND activate = 1";
         $result = pdo_fetch_all ($sql);
         
@@ -26,6 +29,7 @@ include 'header.php';
 		if (!$result) {
 			
 			//Generate Activation Token:
+			
 	        $token = hash('md5', $form_data['firstName'].$form_data['lastName'].$form_data['email'].date('U'));
 	        
 	        //Insert USerdata in database:
@@ -45,7 +49,10 @@ include 'header.php';
 	                
 	        
 	        // Send activiation email to user.
-	        send_email ($form_data['email'], $form_data['firstName'], $token);
+	        $out_email = secure_output ($form_data['email']);
+	        $out_firstName = secure_output ($form_data['firstName']);
+	        
+	        send_email ($out_email, $out_firstName, $token);
 			
 			//Show succes message:
 			include('ui/register_succes.php');

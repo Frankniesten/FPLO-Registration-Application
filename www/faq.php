@@ -1,4 +1,4 @@
-<?php include 'header.php';
+<?php include $_SERVER['DOCUMENT_ROOT'].'/../data/'.'header.php';
 	
 ?>
 

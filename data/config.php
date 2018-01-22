@@ -19,6 +19,6 @@ $config = array ();
 	$config['simplesamlphp_idp'] = 'default-sp';
 	
 	//NodeRed URL:
-	$config['nodered_url'] = 'http://***';
+	$config['nodered_url'] = 'http://192.168.0.1:50592';
 
 ?>	

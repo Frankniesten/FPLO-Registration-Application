@@ -6,6 +6,9 @@
 	include 'function_integrate.php';
 	include 'function_email.php';
 	include 'function_api.php';
+	include 'functions_secure.php';
+	
+	
 	
 
 ?>

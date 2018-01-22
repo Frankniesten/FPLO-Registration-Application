@@ -1,5 +1,5 @@
 <?php 
-	include 'header.php';
+	include $_SERVER['DOCUMENT_ROOT'].'/../data/'.'header.php';
 	
 	//Include simplesaml auth:
 	require_once(getConfig($config, 'simplesamlphp_path'));

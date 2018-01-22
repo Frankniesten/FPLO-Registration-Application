@@ -1,6 +1,6 @@
 <?php
 	
-	include 'header.php'; 
+	include $_SERVER['DOCUMENT_ROOT'].'/../data/'.'header.php'; 
 ?>
 
 <div class="container">
@@ -49,6 +49,7 @@ if ($result) {
 			"password" => $passwordReady
         );   
 
+
 		//Remove Token(s) & Set Activation to TRUE in Database:
         $content = array(
 		"email" => $result[0]['email'],
@@ -83,9 +84,9 @@ if ($result) {
 		
 		<ul class="list-group">
 	  <li class="list-group-item list-group-item-dark"><h5 >Account gegevens</h5></li>
-	  <li class="list-group-item"><b>Voornaam: </b><?php echo $result[0]['firstName']; ?></li>
-	  <li class="list-group-item"><b>Achternaam: </b><?php echo $result[0]['lastName']; ?></li>
-	  <li class="list-group-item "><b>Email: </b><?php echo $result[0]['email']; ?></li>
+	  <li class="list-group-item"><b>Voornaam: </b><?php echo secure_output ($result[0]['firstName']); ?></li>
+	  <li class="list-group-item"><b>Achternaam: </b><?php echo secure_output ($result[0]['lastName']); ?></li>
+	  <li class="list-group-item "><b>Email: </b><?php echo secure_output ($result[0]['email']); ?></li>
 	</ul>
 	
 	<form action="" method="post" id="activate-account"  role="form" data-toggle="validator">
