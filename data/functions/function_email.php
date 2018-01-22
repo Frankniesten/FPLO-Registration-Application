@@ -26,7 +26,7 @@ function send_email($email, $firstname, $token) {
 	$headers[] = 'Content-type: text/html; charset=iso-8859-1';	
 	
 	// Mail it
-	mail($to, $subject, $message, implode("\r\n", $headers));
+	mail($to, $subject, $message, implode("\r\n", $headers)); 
 
 }
 
