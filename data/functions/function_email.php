@@ -21,7 +21,7 @@ function send_email($email, $firstname, $token) {
 	';
 	
 	// To send HTML mail, the Content-type header must be set
-	$headers[] = 'FROM: info@fplo.nl';
+	$headers[] = 'FROM: leeromgevingpilots@surfnet.nl';
 	$headers[] = 'MIME-Version: 1.0';
 	$headers[] = 'Content-type: text/html; charset=iso-8859-1';	
 	
