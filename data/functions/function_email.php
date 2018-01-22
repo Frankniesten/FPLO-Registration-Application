@@ -15,7 +15,7 @@ function send_email($email, $firstname, $token) {
 	</head>
 	<body>
 	  <p>Klik op onderstaande activatie link om u account voor de SURFnet FPLO omgeving te bevestigen.</p>
-	  http://register.pilot.fplo.surfnet.nl/activate.php?token='.$token.'
+	  http://account.pilot.fplo.surfnet.nl/activate.php?token='.$token.'
 	 </body>
 	</html>
 	';
