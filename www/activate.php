@@ -68,7 +68,7 @@ if ($result) {
 	    $nodered_response = nodered_api ('/person','POST', $account);
 	    	    
 	    //Show succes message:
-	    include 'ui/activate_succes.php';
+	    include $_SERVER['DOCUMENT_ROOT'].'/../data/'.'ui/activate_succes.php';
  	}
 
 	else {
@@ -78,7 +78,7 @@ if ($result) {
 		
 		if ($dateFromDatabase >= $tokenDuration) {
 			
-					include 'ui/activate_verified.php';
+					include $_SERVER['DOCUMENT_ROOT'].'/../data/'.'ui/activate_verified.php';
 		
 		?>
 		
@@ -150,14 +150,14 @@ if ($result) {
 		
 		else {
 			
-			include 'ui/activate_danger_expired.php';
+			include $_SERVER['DOCUMENT_ROOT'].'/../data/'.'ui/activate_danger_expired.php';
 		}
 	}
 }
 
 if (!$result) {
 	
-	include 'ui/activate_danger.php';
+	include $_SERVER['DOCUMENT_ROOT'].'/../data/'.'ui/activate_danger.php';
 }
 ?>
 

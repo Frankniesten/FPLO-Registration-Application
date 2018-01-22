@@ -23,7 +23,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/../data/'.'header.php';
         if ($result) {
 	
 	
-			include('ui/register_warning.php');
+			include($_SERVER['DOCUMENT_ROOT'].'/../data/'.'ui/register_warning.php');
 		}
 		
 		if (!$result) {
@@ -55,7 +55,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/../data/'.'header.php';
 	        send_email ($out_email, $out_firstName, $token);
 			
 			//Show succes message:
-			include('ui/register_succes.php');
+			include($_SERVER['DOCUMENT_ROOT'].'/../data/'.'ui/register_succes.php');
 		}        
 	} 
 
