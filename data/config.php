@@ -25,7 +25,5 @@ $config = array ();
 	$config['registration_saml'] = true;
 	
 	//Enable manual Registration:
-	$config['registration_manual'] = false;
-	
-	
+	$config['registration_manual'] = false;	
 ?>	

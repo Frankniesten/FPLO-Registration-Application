@@ -90,6 +90,29 @@ if ($result) {
 	</ul>
 	
 	<form action="" method="post" id="activate-account"  role="form" data-toggle="validator">
+	<br>
+	<ul class="list-group">
+		<li class="list-group-item list-group-item-dark"><h5>Selecteer rol</h5></li>
+		<li class="list-group-item">
+			<div class="form-group col-sm-6">
+				<div class="form-check">
+					  <label class="form-check-label">
+					    <input class="form-check-input" type="radio" name="Rol" id="Rol" value="teacher" required>
+					    Docent is mijn rol binnen de leeromgeving.
+					  </label>
+					</div>
+					<div class="form-check">
+					  <label class="form-check-label">
+					    <input class="form-check-input" type="radio" name="Rol" id="Rol" value="student" required>
+					    Student	is mijn rol binnen de leeromgeving.				  </label>
+					</div>
+				<div class="help-block with-errors text-muted"></div>
+			</div>
+		</li>
+	</ul>
+	
+	
+	
 	<?php
 		
 		if ($result[0]['surfconext'] == FALSE){
@@ -99,9 +122,6 @@ if ($result) {
 	<ul class="list-group">
 		<li class="list-group-item list-group-item-dark"><h5>Selecteer rol</h5></li>
 		<li class="list-group-item">
-	
-			
-			
 			<div class="form-group col-sm-6">
 				<div class="form-check">
 					  <label class="form-check-label">
