@@ -2,14 +2,19 @@
 	include $_SERVER['DOCUMENT_ROOT'].'/../data/'.'header.php';
 ?>
 
+	
 <div class="container">
 	<div class="starter-template">
         <h2>Registratie SURFnet FPLO</h2>
         <p class="lead">Meld u hier aan om toegang te krijgen tot de SURFnet FPLO omgeving.</p><br>
-		<p>Kies voor 'aanmelden via SURFconext' om toegang te krijgen tot de FPLO omgeving via uw eigen persoonlijke instellingsaccount. Geen instellingsaccount? Geen probleem registreer dan een account met een eigen gebruikersnaam en wachtwoord!</p>
+		<p>Kies voor 'aanmelden via SURFconext' om toegang te krijgen tot de FPLO omgeving via uw eigen persoonlijke instellingsaccount.</p>
     </div>
       
     <div class="row"></span>
+	    
+	    <?php 
+	if (getConfig($config, 'registration_saml') == true) { ?> 
+	
     	<div class="col">
 			<div class="card">
 			<div class="card-body">
@@ -19,7 +24,10 @@
 		  </div>
 		</div>
     </div>
+<?php } ?>    
     
+<?php 
+	if (getConfig($config, 'registration_manual') == true) { ?>
     <div class="col-1"></div>
     	<div class="col">
 			<div class="card">
@@ -31,6 +39,8 @@
 		</div>
     </div>
   </div>
+  
+  <?php } ?>
 
 </div><!-- /.container -->
 </body>

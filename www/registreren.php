@@ -2,6 +2,11 @@
 
 include $_SERVER['DOCUMENT_ROOT'].'/../data/'.'header.php'; 
 
+if (getConfig($config, 'registration_manual') == false) {
+	
+	die();
+}
+
 ?>
 
 <div class="container">

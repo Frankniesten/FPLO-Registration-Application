@@ -20,5 +20,12 @@ $config = array ();
 	
 	//NodeRed URL:
 	$config['nodered_url'] = 'http://192.168.0.1:50592';
-
+	
+	//Enable SAML Registration:
+	$config['registration_saml'] = true;
+	
+	//Enable manual Registration:
+	$config['registration_manual'] = false;
+	
+	
 ?>	
