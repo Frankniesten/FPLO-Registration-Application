@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.3
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jan 31, 2018 at 03:26 PM
--- Server version: 5.6.35
--- PHP Version: 7.0.22
+-- Host: localhost:8889
+-- Generation Time: Mar 15, 2018 at 10:57 AM
+-- Server version: 5.6.38
+-- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,6 +26,8 @@ CREATE TABLE `register` (
   `lastName` varchar(100) CHARACTER SET latin1 NOT NULL,
   `email` varchar(100) CHARACTER SET latin1 NOT NULL,
   `schacHomeOrganization` varchar(250) DEFAULT NULL,
+  `EduPersonPrincipalName` varchar(500) DEFAULT NULL,
+  `affiliation` varchar(500) DEFAULT NULL,
   `surfconext` tinyint(1) NOT NULL,
   `token` varchar(100) CHARACTER SET latin1 NOT NULL,
   `activate` tinyint(1) NOT NULL,
@@ -50,4 +52,4 @@ ALTER TABLE `register`
 -- AUTO_INCREMENT for table `register`
 --
 ALTER TABLE `register`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
