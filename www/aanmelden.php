@@ -17,7 +17,9 @@ include $_SERVER['DOCUMENT_ROOT'].'/../data/'.'header.php';
 		"lastName" => $attributes['urn:mace:dir:attribute-def:sn'][0],
 		"uid" => $attributes['urn:mace:dir:attribute-def:uid'][0],
 		"mail" => $attributes['urn:mace:dir:attribute-def:mail'][0],
-		"schacHomeOrganization" => $attributes['urn:mace:terena.org:attribute-def:schacHomeOrganization'][0]
+		"schacHomeOrganization" => $attributes['urn:mace:terena.org:attribute-def:schacHomeOrganization'][0],
+		"EduPersonPrincipalName" => $attributes['EduPersonPrincipalName'][0],
+		"affiliation" => $attributes['affiliation'][0]
 	);
 
 ?>
@@ -26,6 +28,13 @@ include $_SERVER['DOCUMENT_ROOT'].'/../data/'.'header.php';
 	
 <?php
 	
+	if (!$attributesAccount['mail']) {
+		
+		include($_SERVER['DOCUMENT_ROOT'].'/../data/'.'ui/register_warning_no_email.php');
+		exit;
+	}
+	
+	//Register account:
 	if (isset($_POST['register'])) {
         
         $form_data=$_POST;
@@ -35,7 +44,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/../data/'.'header.php';
         $form_data = secure_input_array ($form_data);
         
         //Check if user already exists:        
-        $sql = "SELECT * FROM register WHERE email = '".$form_data['email']."' AND activate = 1";
+        $sql = "SELECT * FROM register WHERE EduPersonPrincipalName = '".$attributesAccount['EduPersonPrincipalName']."' AND activate = 1";
         $result = pdo_fetch_all ($sql);
         
         if ($result) {
@@ -57,12 +66,14 @@ include $_SERVER['DOCUMENT_ROOT'].'/../data/'.'header.php';
 				"lastName" => $form_data['lastName'],
 				"email" => $form_data['email'],
 				"schacHomeOrganization" => $attributesAccount['schacHomeOrganization'],
+				"EduPersonPrincipalName" => $attributesAccount['EduPersonPrincipalName'],
+				"affiliation" => $attributesAccount['affiliation'],
 				"surfconext" => 1,
 				"token" => $token,
 				"activate" => 0
 		    );
 		    
-		    $sql = "INSERT INTO register (firstName, lastName, email, schacHomeOrganization, surfconext, token, activate) VALUES (:firstName, :lastName, :email, :schacHomeOrganization, :surfconext, :token, :activate)";
+		    $sql = "INSERT INTO register (firstName, lastName, email, schacHomeOrganization, EduPersonPrincipalName, affiliation, surfconext, token, activate) VALUES (:firstName, :lastName, :email, :schacHomeOrganization, :EduPersonPrincipalName, :affiliation, :surfconext, :token, :activate)";
 	
 	        pdo_insert ($sql, $content);
 	                

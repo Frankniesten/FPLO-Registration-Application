@@ -46,19 +46,26 @@ if ($result) {
 			"lastName" => $result[0]['lastName'],
 			"email" => $result[0]['email'],
 			"role" => $form_data['Rol'],
-			"password" => $passwordReady
+			"password" => $passwordReady,
+			"schacHomeOrganization" => $result[0]['schacHomeOrganization'],
+			"EduPersonPrincipalName" => $result[0]['EduPersonPrincipalName'],
+			"affiliation" => $result[0]['affiliation'],
         );   
 
 
 		//Remove Token(s) & Set Activation to TRUE in Database:
         $content = array(
-		"email" => $result[0]['email'],
+	    "firstName" "0",
+		"lastName" "0",
+		"email" => "0",
 		"token" => "0",
 		"activate" => 1
-
+		"schacHomeOrganization" => "0",
+		"EduPersonPrincipalName" => $result[0]['EduPersonPrincipalName'],
+		"affiliation" => "0",
 	    );
 	    
-	    $sql = "UPDATE register SET token = :token, activate = :activate WHERE email=:email";
+	    $sql = "UPDATE register SET firstName = :firstName, lastName = :lastName, email = :email, token = :token, schacHomeOrganization = :schacHomeOrganization, affiliation = :affiliation, activate = :activate WHERE EduPersonPrincipalName=:EduPersonPrincipalName";
         pdo_insert ($sql, $content);
  
 	      
@@ -90,6 +97,10 @@ if ($result) {
 	</ul>
 	
 	<form action="" method="post" id="activate-account"  role="form" data-toggle="validator">
+	<?php	
+	if ($result[0]['surfconext'] == TRUE){	
+		
+	?>
 	<br>
 	<ul class="list-group">
 		<li class="list-group-item list-group-item-dark"><h5>Selecteer rol</h5></li>
@@ -114,7 +125,7 @@ if ($result) {
 	
 	
 	<?php
-		
+		}
 		if ($result[0]['surfconext'] == FALSE){
 		
 	?>

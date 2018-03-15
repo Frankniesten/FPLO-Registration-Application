@@ -1,4 +1,9 @@
-<div class="alert alert-succes" role="alert">
-  <h4 class="alert-heading">Check!</h4>
-  <p>Aww yeah, er is succesvol een account aangemaakt voor de SURFnet FPLO omgeving. Voortaan is het mogelijk om met dit account in te loggen.</p>
+<br>
+<br>
+<div class="jumbotron">
+  <h1 class="display-4">Welkom!</h1>
+  <p class="lead">Er is succesvol een account aangemaakt voor de SURFnet FPLO omgeving. Klik op onderstaande button om naar het startportaal van de leeromgeving te gaan.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="https://www.pilot.fplo.surfnet.nl" role="button">Aan de slag</a>
+  </p>
 </div>
