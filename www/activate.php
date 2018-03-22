@@ -49,7 +49,7 @@ if ($result) {
 			"password" => $passwordReady,
 			"schacHomeOrganization" => $result[0]['schacHomeOrganization'],
 			"EduPersonPrincipalName" => $result[0]['EduPersonPrincipalName'],
-			"affiliation" => $result[0]['affiliation'],
+			"affiliation" => $result[0]['affiliation']
         );   
 
 
@@ -59,7 +59,7 @@ if ($result) {
 		"lastName" => "0",
 		"email" => "0",
 		"token" => "0",
-		"activate" => 1
+		"activate" => 1,
 		"schacHomeOrganization" => "0",
 		"EduPersonPrincipalName" => $result[0]['EduPersonPrincipalName'],
 		"affiliation" => "0",
