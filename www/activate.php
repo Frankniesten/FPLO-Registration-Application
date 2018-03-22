@@ -55,8 +55,8 @@ if ($result) {
 
 		//Remove Token(s) & Set Activation to TRUE in Database:
         $content = array(
-	    "firstName" "0",
-		"lastName" "0",
+	    "firstName" => "0",
+		"lastName" => "0",
 		"email" => "0",
 		"token" => "0",
 		"activate" => 1
