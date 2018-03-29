@@ -18,7 +18,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/../data/'.'header.php';
 		"uid" => $attributes['urn:mace:dir:attribute-def:uid'][0],
 		"mail" => $attributes['urn:mace:dir:attribute-def:mail'][0],
 		"schacHomeOrganization" => $attributes['urn:mace:terena.org:attribute-def:schacHomeOrganization'][0],
-		"EduPersonPrincipalName" => $attributes['urn:mace:dir:attribute-def:eduPersonTargetedID'][0],
+		"EduPersonPrincipalName" => strip_tags($attributes['urn:mace:dir:attribute-def:eduPersonTargetedID'][0]),
 		"affiliation" => $attributes['affiliation'][0]
 	);
 
