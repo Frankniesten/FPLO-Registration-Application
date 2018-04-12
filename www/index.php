@@ -5,9 +5,8 @@
 	
 <div class="container">
 	<div class="starter-template">
-        <h2>Registratie SURFnet FPLO</h2>
-        <p class="lead">Meld u hier aan om toegang te krijgen tot de SURFnet FPLO omgeving.</p><br>
-		<p>Kies voor 'aanmelden via SURFconext' om toegang te krijgen tot de FPLO omgeving via uw eigen persoonlijke instellingsaccount.</p>
+        <h2>SURF pilot modulaire leeromgeving</h2>
+        <p class="lead">Meld je hier aan om toegang te krijgen tot de SURF pilot modulaire leeromgeving.</p><br>
     </div>
       
     <div class="row"></span>
@@ -17,10 +16,8 @@
 	
     	<div class="col">
 			<div class="card">
-			<div class="card-body">
-		    	<h4 class="card-title">Aanmelden via SURFconext</h4>
-				<p class="card-text">Kies deze optie om toegang te krijgen tot de FPLO omgeving met behulp van uw persoonlijke instellingsaccount.</p>
-				<a href="aanmelden.php"><button type="button" class="btn btn-dark ">Aanmelden</button></a>
+			<div class="card-body" align="center">
+				<a href="aanmelden.php"><button type="button" class="btn btn-dark btn-lg">Aanmelden</button></a>
 		  </div>
 		</div>
     </div>
@@ -34,7 +31,7 @@
 			<div class="card-body">
 		    	<h4 class="card-title">FPLO account registreren</h4>
 				<p class="card-text">Kies deze optie om een gebruikersnaam te registreren. Deze gebruikt u vervolgens om in te loggen op de FPLO omgeving.</p>
-				<a href="registreren.php"><button type="button" class="btn btn-dark">Registreren</button></a>
+				<a href="registreren.php"><button type="button" class="btn btn-dark btn-lg">Registreren</button></a>
 		  	</div>
 		</div>
     </div>
@@ -43,5 +40,8 @@
   <?php } ?>
 
 </div><!-- /.container -->
+	<div class="col-sm-12" style='position:absolute;bottom:0;right:0;'>
+        <p><img align="right" src="./media/surflogo.png" alt="surflogo" width="125" height="64" vspace="20"/></p>
+    </div>
 </body>
 </html>

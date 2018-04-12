@@ -2,7 +2,7 @@
 <br>
 <div class="jumbotron">
   <h1 class="display-4">Welkom!</h1>
-  <p class="lead">Er is succesvol een account aangemaakt voor de SURFnet FPLO omgeving. Klik op onderstaande button om naar het startportaal van de leeromgeving te gaan.</p>
+  <p class="lead">Je account is succesvol aangemaakt. Klik op onderstaande button om definitief in te loggen op de SURF pilot modulaire leeromgeving.</p>
   <p class="lead">
     <a class="btn btn-primary btn-lg" href="https://www.pilot.fplo.surfnet.nl" role="button">Aan de slag</a>
   </p>

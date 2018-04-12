@@ -54,6 +54,11 @@
 </div>
 
     </div><!-- /.container -->
+    </div><!-- /.container -->
+	<div class="col-sm-12" style='position:absolute;bottom:0;right:0;'>
+        <p><img align="right" src="./media/surflogo.png" alt="surflogo" width="125" height="64" vspace="20"/></p>
+    </div>
+</body>
   </body>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>

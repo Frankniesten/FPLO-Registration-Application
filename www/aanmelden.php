@@ -93,8 +93,7 @@ if (!$_POST) {
 
 ?>
 	<div class="starter-template">
-    	<h2>Registreren account</h2>
-		<p class="lead">Klik op aanmelden om een account voor de SURFnet FPLO aan te maken.</p>
+    	<h2>Verifieren account</h2>
   	</div>
  
   	<div class="row">
@@ -103,7 +102,7 @@ if (!$_POST) {
 			
 			<form action="" method="post" id="register-form"  data-toggle="validator" role="form">
 				<br>
-				<h4>Account gegevens</h4>
+				<h4>Accountgegevens</h4>
 				
 				<div class="form-group has-feedback">
 			    	<label for="exampleInputEmail1">Voornaam</label>
@@ -122,7 +121,7 @@ if (!$_POST) {
 					<div class="help-block with-errors text-muted"></div>
 			  	</div>
 			  	<br>
-			  	<button type="submit" class="btn btn-dark" name="register">Aanmelden</button>
+			  	<button type="submit" class="btn btn-dark" name="register">Verifier</button>
 			  
 			</form>
 			<br>
@@ -136,5 +135,9 @@ if (!$_POST) {
   	<?php } ?>
       
     </div><!-- /.container -->
+	<div class="col-sm-12" style='position:absolute;bottom:0;right:0;'>
+        <p><img align="right" src="./media/surflogo.png" alt="surflogo" width="125" height="64" vspace="20"/></p>
+    </div>
+</body>
   </body>
 </html>

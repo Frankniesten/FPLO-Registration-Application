@@ -90,7 +90,7 @@ if ($result) {
 		?>
 		
 		<ul class="list-group">
-	  <li class="list-group-item list-group-item-dark"><h5 >Account gegevens</h5></li>
+	  <li class="list-group-item list-group-item-dark"><h5 >Accountgegevens</h5></li>
 	  <li class="list-group-item"><b>Voornaam: </b><?php echo secure_output ($result[0]['firstName']); ?></li>
 	  <li class="list-group-item"><b>Achternaam: </b><?php echo secure_output ($result[0]['lastName']); ?></li>
 	  <li class="list-group-item "><b>Email: </b><?php echo secure_output ($result[0]['email']); ?></li>
@@ -137,13 +137,13 @@ if ($result) {
 				<div class="form-check">
 					  <label class="form-check-label">
 					    <input class="form-check-input" type="radio" name="Rol" id="Rol" value="teacher" >
-					    Docent is mijn rol binnen de leeromgeving.
+					    docent
 					  </label>
 					</div>
 					<div class="form-check">
 					  <label class="form-check-label">
 					    <input class="form-check-input" type="radio" name="Rol" id="Rol" value="student" checked>
-					    Student	is mijn rol binnen de leeromgeving.				  </label>
+					    student		  </label>
 					</div>
 				<div class="help-block with-errors text-muted"></div>
 			</div>
@@ -171,8 +171,7 @@ if ($result) {
 	</ul>
 	<?php } ?>
 	<br>
-			<button type="submit" class="btn btn-dark" name="register">Activeer FPLO Account</button>
-			<small class="text-muted">Na het activeren van het account wordt je doorgestuurd naar de login pagina van de SURFnet FPLO Omgeving.</small>
+			<button type="submit" class="btn btn-dark" name="register">Activeer</button>
 		</form>
 		
 		<?php
@@ -193,5 +192,9 @@ if (!$result) {
 ?>
 
   </div><!-- /.container -->
+	<div class="col-sm-12" style='position:absolute;bottom:0;right:0;'>
+        <p><img align="right" src="./media/surflogo.png" alt="surflogo" width="125" height="64" vspace="20"/></p>
+    </div>
+</body>
   </body>
 </html>

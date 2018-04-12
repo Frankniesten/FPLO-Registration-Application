@@ -1,3 +1,3 @@
 <div class="alert alert-success" role="alert">
-	Het account is succesvol aangemaakt. Er is een email naar u verstuurd om het account te activeren en het registratieproces af te ronden.
+	Je hebt een e-mail ontvangen om het account te activeren en het aanmeldproces af te ronden.
 </div>

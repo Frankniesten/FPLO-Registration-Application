@@ -5,7 +5,7 @@ function send_email($email, $firstname, $token) {
 	$to = $email; // note the comma
 	
 	// Subject
-	$subject = 'Activatie account SURFnet FPLO Omgeving';
+	$subject = 'Activeren SURF pilot modulaire leeromgeving';
 	
 	// Message
 	$message = '
@@ -14,8 +14,8 @@ function send_email($email, $firstname, $token) {
 	  <title>Beste '.$firstname.',</title>
 	</head>
 	<body>
-	  <p>Klik op onderstaande activatie link om u account voor de SURFnet FPLO omgeving te bevestigen.</p>
-	  http://account.pilot.fplo.surfnet.nl/activate.php?token='.$token.'
+	  <p>Klik op onderstaande link om je account voor de SURF pilot modulaire leeromgeving te bevestigen. Deze link is 24 uur geldig.</p>
+	  https://account.pilot.fplo.surfnet.nl/activate.php?token='.$token.'
 	 </body>
 	</html>
 	';
