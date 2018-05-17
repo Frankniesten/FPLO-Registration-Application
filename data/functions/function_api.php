@@ -32,6 +32,5 @@ $data = http_build_query($data);
 		);
 	
 	return $response;
-}
-	
+}	
 ?>

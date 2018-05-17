@@ -23,5 +23,4 @@ function pdo_fetch_all ($sql) {
 
 	return $result;
 }
-
 ?>

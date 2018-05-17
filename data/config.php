@@ -1,29 +1,30 @@
 <?php
 $config = array ();
 
-//MAIN PARAMETERS:
+//Database Configuration:
 
 	//mySQL Database
 	$config['dbHost'] = 'localhost';
 	$config['dbName'] = 'register';
 	$config['dbUser'] = '****';
 	$config['dbPasswd'] = '****';
-	
-	//Activation Token duration in hours:
-	$config['tokDur'] = '-48 hours';
-	
+
+//SAML Configuration:	
+
 	//Path to simplesamlphp /lib/_autoload.php file:
 	$config['simplesamlphp_path'] = '../../lib/_autoload.php';
 	
 	//simplesamlphp IdP name:
 	$config['simplesamlphp_idp'] = 'default-sp';
 	
+	$config['logout_url'] = '****';
+	
+	
 	//NodeRed URL:
-	$config['nodered_url'] = 'http://192.168.0.1:50592';
+	$config['nodered_url'] = '****';
 	
-	//Enable SAML Registration:
-	$config['registration_saml'] = true;
+//Layout Configuration:
 	
-	//Enable manual Registration:
-	$config['registration_manual'] = false;	
-?>	
+	//Navigation Bar title:
+	$config['navbar_title'] = '****';	
+?>
